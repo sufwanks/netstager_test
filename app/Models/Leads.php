@@ -30,7 +30,7 @@ class Leads extends Model
 
     public static function saveData($params)
     {
-            // dd($request);
+        // dd($request);
 
         return Leads::insertGetId([
             'first_name' => $params['first_name'],
@@ -40,6 +40,9 @@ class Leads extends Model
             'year' => $params['year'] ?? '',
             'email_id' => $params['email_id'] ?? '',
             'phone_number' => $params['phone_number'] ?? '',
+            'previous_address_one' => $params['previous_address_one'] ?? '',
+            'previous_address_two' => $params['previous_address_two'] ?? '',
+            'previous_address_three' => $params['previous_address_three'] ?? '',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
